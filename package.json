@@ -1,0 +1,27 @@
+{
+  "name": "ped-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Rafael Ghifari",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "moment": "^2.29.3",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "pdf-creator-node": "^2.3.4",
+    "qrcode": "^1.5.0",
+    "rotating-file-stream": "^3.0.4",
+    "sequelize": "^6.21.0"
+  }
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "PCBA Department 1",
+        "abbreviation": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "PCBA Department 2",
+        "abbreviation": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "Process Engineer Department",
+        "abbreviation": "PED",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "Quality Assurance Department",
+        "abbreviation": "QAD",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "Quality Improvement Department",
+        "abbreviation": "QID",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "New Product Department",
+        "abbreviation": "NPD",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    }
+]

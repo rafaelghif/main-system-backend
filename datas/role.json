@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Super User",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "Admin",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "User",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    }
+]

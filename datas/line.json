@@ -1,0 +1,182 @@
+[
+    {
+        "name": "AIO MOUNTING",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CCS PBA",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CHRONUS LONGBAR",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CHRONUS NIU COM",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CHRONUS PS",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CHRONUS SCIO",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CHRONUS SIM",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CHRONUS TERMINAL",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "CPU",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "DIGITAL POWER METER",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FIO 1",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FIO 2",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FIO BOARD",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FIO PS",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FIO T/R",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FIO TERMINAL BOARD",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FLXA2W",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "FLXA4W",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "KEYBOARD",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "N-IO FIELD ENCLOSURE",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "NODE 1",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "NODE 2",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "NODE CHRONUS",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "OTDR",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "PROSAFE",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "PS PBA",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "PS PBA",
+        "DepartmentId": "PD1",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "RELAY",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "SMT CPU",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    },
+    {
+        "name": "YTA TERMINAL",
+        "DepartmentId": "PD2",
+        "createdBy": "SYSTEM",
+        "updatedBy": "SYSTEM"
+    }
+]

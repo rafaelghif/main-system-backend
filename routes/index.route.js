@@ -5,4 +5,5 @@ module.exports = (app) => {
     app.use('/api/line', require('./line.route'))
     app.use('/api/checkerParts', require('./checkerPart.route'))
     app.use('/api/worksheet', require('./worksheet.route'))
+    app.use('/api/inspection', require('./inspection.route'))
 }

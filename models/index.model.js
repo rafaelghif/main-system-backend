@@ -18,6 +18,12 @@ const Inspection = require("./Inspection.model")
 const CheckerPart = require("./CheckerPart.model")
 const Worksheet = require("./worksheet.model")
 const WorksheetDetail = require("./worksheetDetail.model")
+const WorksheetDetailTemp = require("./worksheetDetailTemp.model")
+const WorksheetTimeline = require("./worksheetTimeline.model")
+const InspectionDetail = require("./InspectionDetail.model")
+const InspectionDetailCheck = require("./inspectionDetailCheck.model")
+const InspectionTimeline = require("./inspectionTimeline.model")
+const CheckerPartHistory = require("./CheckerPartHistory.model")
 
 const model = {}
 
@@ -30,8 +36,15 @@ model.Line = Line
 model.Checker = Checker
 model.CheckerPart = CheckerPart
 model.Inspection = Inspection
+model.InspectionDetail = InspectionDetail
+model.InspectionDetailCheck = InspectionDetailCheck
+model.InspectionTimeline = InspectionTimeline
+
 model.Worksheet = Worksheet
 model.WorksheetDetail = WorksheetDetail
+model.WorksheetDetailTemp = WorksheetDetailTemp
+model.WorksheetTimeline = WorksheetTimeline
+model.CheckerPartHistory = CheckerPartHistory
 
 // connDatabase.sync({ force: true }).then(() => {
 //     initialValue()
@@ -97,13 +110,38 @@ model.Checker.belongsTo(model.Line)
 
 model.Checker.hasOne(model.Inspection)
 model.Inspection.belongsTo(model.Checker)
-
 model.Checker.hasMany(model.CheckerPart)
 model.CheckerPart.belongsTo(model.Checker)
+model.CheckerPart.hasMany(model.CheckerPartHistory)
+model.CheckerPartHistory.belongsTo(model.CheckerPart)
+model.Inspection.hasMany(model.InspectionDetail)
+model.InspectionDetail.belongsTo(model.Inspection)
+model.Worksheet.hasMany(model.InspectionDetail)
+model.InspectionDetail.belongsTo(model.Worksheet)
+model.InspectionDetail.hasMany(model.InspectionDetailCheck)
+model.InspectionDetailCheck.belongsTo(model.InspectionDetail)
+model.Worksheet.hasMany(model.InspectionDetailCheck)
+model.InspectionDetailCheck.belongsTo(model.Worksheet)
+model.WorksheetDetail.hasMany(model.InspectionDetailCheck)
+model.InspectionDetailCheck.belongsTo(model.WorksheetDetail)
+model.Inspection.hasMany(model.InspectionTimeline)
+model.InspectionTimeline.belongsTo(model.Inspection)
+model.InspectionDetail.hasMany(model.InspectionTimeline)
+model.InspectionTimeline.belongsTo(model.InspectionDetail)
 
-model.Checker.hasOne(model.Worksheet)
+model.Checker.hasMany(model.Worksheet)
 model.Worksheet.belongsTo(model.Checker)
-model.Worksheet.hasMany(model.WorksheetDetail)
-model.WorksheetDetail.belongsTo(model.Worksheet)
+model.Worksheet.hasMany(model.WorksheetDetail, { onDelete: 'CASCADE' })
+model.WorksheetDetail.belongsTo(model.Worksheet,)
+model.Worksheet.hasMany(model.WorksheetDetailTemp, { onDelete: 'CASCADE' })
+model.WorksheetDetailTemp.belongsTo(model.Worksheet,)
+model.CheckerPart.hasMany(model.WorksheetDetail)
+model.WorksheetDetail.belongsTo(model.CheckerPart)
+model.CheckerPart.hasMany(model.WorksheetDetailTemp)
+model.WorksheetDetailTemp.belongsTo(model.CheckerPart)
+model.Checker.hasMany(model.WorksheetTimeline)
+model.WorksheetTimeline.belongsTo(model.Checker)
+
+
 
 module.exports = model

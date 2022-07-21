@@ -16,7 +16,7 @@ const CheckerPart = connDatabase.define('CheckerPart', {
         allowNull: true,
     },
     changeDate: {
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
         allowNull: true,
     },
     createdBy: {

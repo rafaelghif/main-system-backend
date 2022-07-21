@@ -23,6 +23,14 @@ const User = connDatabase.define('User', {
         type: DataTypes.STRING(80),
         allowNull: false
     },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: null,
+        validate: {
+            isEmail: true
+        }
+    },
     createdBy: {
         type: DataTypes.STRING(8),
         allowNull: false

@@ -8,7 +8,7 @@ const verifyLogin = (req, res, next) => {
                 if (err) {
                     return res.status(403).send('Token Invalid')
                 } else {
-                    req.decoded = res
+                    req.decoded = result
                     next()
                 }
             })

@@ -1,26 +1,22 @@
 const { connDatabase } = require("../config/database.config");
 const { DataTypes } = require("sequelize");
 
-const WorksheetDetail = connDatabase.define('WorksheetDetail', {
+const CheckerPartHistory = connDatabase.define('CheckerPartHistory', {
     id: {
         type: DataTypes.CHAR(36),
         primaryKey: true,
-        defaultValue: DataTypes.UUIDV4,
+        defaultValue: DataTypes.UUIDV4
     },
-    inspectionItem: {
-        type: DataTypes.STRING,
+    name: {
+        type: DataTypes.STRING(50),
         allowNull: false,
     },
-    inspectionPicture: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    serialNumber: {
+        type: DataTypes.STRING(30),
+        allowNull: true,
     },
-    sequence: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    specialChange: {
-        type: DataTypes.INTEGER,
+    changeDate: {
+        type: DataTypes.DATE,
         allowNull: true,
     },
     createdBy: {
@@ -33,4 +29,4 @@ const WorksheetDetail = connDatabase.define('WorksheetDetail', {
     }
 })
 
-module.exports = WorksheetDetail;
+module.exports = CheckerPartHistory

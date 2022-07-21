@@ -1,32 +1,27 @@
 const { connDatabase } = require("../config/database.config");
 const { DataTypes } = require("sequelize");
 
-const Worksheet = connDatabase.define('Worksheet', {
+const WorksheetDetailTemp = connDatabase.define('WorksheetDetailTemp', {
     id: {
         type: DataTypes.CHAR(36),
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
     },
-    content: {
+    inspectionItem: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
-    revision: {
+    inspectionPicture: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    sequence: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: 0
     },
-    status: {
-        type: DataTypes.ENUM('Created', 'Issued', 'Approved', 'Rejected'),
-        defaultValue: 'Created'
-    },
-    approvedBy: {
-        type: DataTypes.STRING(8),
-        allowNull: true
-    },
-    approveAt: {
-        type: DataTypes.DATE,
-        allowNull: true
+    specialChange: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
     },
     createdBy: {
         type: DataTypes.STRING(8),
@@ -38,4 +33,4 @@ const Worksheet = connDatabase.define('Worksheet', {
     }
 })
 
-module.exports = Worksheet;
+module.exports = WorksheetDetailTemp;

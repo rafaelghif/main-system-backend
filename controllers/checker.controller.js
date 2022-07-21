@@ -1,9 +1,8 @@
-const { Checker, Inspection } = require("../models/index.model")
+const { Checker, Inspection, Line, CheckerPart, InspectionDetail, Worksheet, WorksheetDetail } = require("../models/index.model")
 const fs = require('fs')
 const QRCode = require('qrcode')
 const md5 = require('md5')
 const moment = require('moment')
-const { generateQrPdf } = require("./qr.controller")
 
 const getCheckers = async (req, res) => {
     try {
@@ -12,6 +11,38 @@ const getCheckers = async (req, res) => {
                 ['regNo', 'ASC']
             ]
         });
+        return res.status(200).send(response)
+    } catch (err) {
+        return res.status(403).send({ msg: err.toString() })
+    }
+}
+
+const getCheckerInformation = async (req, res) => {
+    try {
+        const response = await Checker.findByPk(req.params.CheckerId, {
+            include: [{
+                model: Line
+            }, {
+                model: CheckerPart,
+                required: false
+            }, {
+                model: Inspection,
+                include: [{
+                    model: InspectionDetail,
+                    required: false
+                }],
+            }, {
+                model: Worksheet,
+                where: {
+                    status: 'Approved'
+                },
+                include: [{
+                    model: WorksheetDetail,
+                    required: false
+                }],
+                required: false
+            }],
+        })
         return res.status(200).send(response)
     } catch (err) {
         return res.status(403).send({ msg: err.toString() })
@@ -36,8 +67,6 @@ const addChecker = async (req, res) => {
         })
 
         const responseInspection = await Inspection.create({
-            createdBy: 'SYSTEM',
-            updatedBy: 'SYSTEM',
             CheckerId: response.id
         })
 
@@ -63,5 +92,6 @@ const addChecker = async (req, res) => {
 
 module.exports = {
     getCheckers,
+    getCheckerInformation,
     addChecker
 }
